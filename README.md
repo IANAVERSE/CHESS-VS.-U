@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             background-color: #1a1a2e;
             color: white;
-        }
+}
         #puzzle-container {
             display: flex;
             flex-wrap: wrap;
@@ -51,27 +51,25 @@
   </head>
 <body>
     <h1>Complete the Puzzle</h1>
-         
-<div id="puzzle-container"></div>
-    
-<div id="envelope">
-    <p>will you spend the night of chaos with me?</p>
- <button class="button" onclick="alert('Hooraayy ure my sigma partner at prom! 🥳🥳🥳')">Yes</button>
-        <button class="button" onclick="alert('Ipasa mo to sa bente katao kung hindj magiging hatdog ka')">No</button>
-    </div>
+<div id="puzzle-container"> </div>
+    <div id="envelope">
+<p>will you spend the night of chaos with me?</p>
+ <button class="button" onclick="alert('Hooraayy ure my sigma partner at prom! 🥳🥳🥳')">Yes</button><button class="button" onclick="alert('Ipasa mo to sa bente katao kung hindj magiging hatdog ka')">No</button</div>
 
 <script>
         const puzzleContainer = document.getElementById("puzzle-container");
         const envelope = document.getElementById("envelope");
         const imageURL = "https://via.placeholder.com/300"; 
-        let positions = [0, 1, 2, 3, 4, 5, 6, 7, 8]; 
-        positions = positions.sort(() => Math.random() - 0.5);
+let positions = [0, 1, 2, 3, 4, 5, 6, 7, 8]; 
+      positions = positions.sort(() = > Math.random() - 0.5);
          function createPuzzle() {
             for (let i = 0; i < 9; i++) {
                 let piece = document.createElement("div");
-                piece.classList.add("puzzle-piece");
-                piece.style.backgroundImage = `url(' {https://www.google.com/search?client=ms-android-realme-terr1-rso2&sca_esv=d1274fad44c47b5c&q=heart+svt+valentine+meme&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RReX7QGzwqho4yuBcgTuZUp_yLz8rf_RWqMX90OzQIvvFWbjdAG_AYmK6suwKEGQivPQdrti6dimpbzUTe16pRtKd7YySKkYVdCwk1K7gvcgVbM2z91IqPbAcd0RR_7DTfAzBQkA&udm=2&sa=X&ved=2ahUKEwixuLXynMGLAxX8rlYBHYe2AsUQxKsJegQIDhAB&ictx=0&biw=424&bih=800&dpr=1.7#vhid=23JI08h4GdVDDM&vssid=mosaic}');
-                piece.style.backgroundPosition = `${-100 * (positions[i] % 3)}px ${-100 * Math.floor(positions[i] / 3)}px`;
+      piece.classList.add("puzzle-piece");
+              
+piece.style.backgroundImage = `url(' {https://www.google.com/search?client=ms-android-realme-terr1-rso2&sca_esv=d1274fad44c47b5c&q=heart+svt+valentine+meme&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RReX7QGzwqho4yuBcgTuZUp_yLz8rf_RWqMX90OzQIvvFWbjdAG_AYmK6suwKEGQivPQdrti6dimpbzUTe16pRtKd7YySKkYVdCwk1K7gvcgVbM2z91IqPbAcd0RR_7DTfAzBQkA&udm=2&sa=X&ved=2ahUKEwixuLXynMGLAxX8rlYBHYe2AsUQxKsJegQIDhAB&ictx=0&biw=424&bih=800&dpr=1.7#vhid=23JI08h4GdVDDM&vssid=mosaic}');
+            
+piece.style.backgroundPosition = `${-100 * (positions[i] % 3)}px ${-100 * Math.floor(positions[i] / 3)}px`;
                 piece.draggable = true;
                 piece.setAttribute("data-index", positions[i]);
                 piece.addEventListener("dragstart", dragStart);
