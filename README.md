@@ -50,9 +50,7 @@
 </head>
 <body>
     <h1>Complete the Puzzle to Unlock Your Invitation</h1>
-    <div id="puzzle-container"></div>
-    
-    
+    <div id="puzzle-container"></div>    
 <div id="envelope">
         <p>Are you willing to spend this night of chaos with me?</p>
         <button class="button" onclick="alert('hooraaaaaayyy!!')">Yes</button>
