@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,13 +49,15 @@
     </style>
 </head>
 <body>
-    <h1>Complete the puzzle</h1>
-    <div id="puzzle-container"></div>    
+    <h1>Complete the Puzzle to Unlock Your Invitation</h1>
+    <div id="puzzle-container"></div>
+    
 <div id="envelope">
         <p>Are you willing to spend this night of chaos with me?</p>
-        <button class="button" onclick="alert('hooraayy ure my sigma partner in prom!!🥳🥳🥳')">Yes</button>
-        <button class="button" onclick="alert('ipasa mo to sa bente katao para di ka maging hotdog')">No</button>
+        <button class="button" onclick="alert('Hooraayy ure my sigma partner at prom! 🥳🥳🥳')">Yes</button>
+        <button class="button" onclick="alert('Ipasa mo to sa bente katao kung hindj magiging hatdog ka')">No</button>
     </div>
+    
  <script>
         const puzzleContainer = document.getElementById("puzzle-container");
         const envelope = document.getElementById("envelope");
@@ -62,18 +65,12 @@
         let positions = [0, 1, 2, 3, 4, 5, 6, 7, 8]; 
         positions = positions.sort(() => Math.random() - 0.5);
         
-   function createPuzzle() {
+        function createPuzzle() {
             for (let i = 0; i < 9; i++) {
                 let piece = document.createElement("div");
                 piece.classList.add("puzzle-piece");
-                piece.style.backgroundImage
-                
-
-= url('${imageURL}')`
-
-;piece.style.backgroundPosition =`
-            
-${-100 * (positions[i] % 3)}px ${-100 * Math.floor(positions[i] / 3)}px`;
+                piece.style.backgroundImage = `url('${imageURL}')`;
+                piece.style.backgroundPosition = `${-100 * (positions[i] % 3)}px ${-100 * Math.floor(positions[i] / 3)}px`;
                 piece.draggable = true;
                 piece.setAttribute("data-index", positions[i]);
                 piece.addEventListener("dragstart", dragStart);
@@ -83,33 +80,36 @@ ${-100 * (positions[i] % 3)}px ${-100 * Math.floor(positions[i] / 3)}px`;
             }
         }
         
-function dragStart(event) {
+        function dragStart(event) {
             event.dataTransfer.setData("text", event.target.dataset.index);
         }
-function dragOver(event) {
+        
+        function dragOver(event) {
             event.preventDefault();
         }
-    function drop(event) {
+        
+        function drop(event) {
             event.preventDefault();
             let draggedIndex = event.dataTransfer.getData("text");
             let targetIndex = event.target.dataset.index;
             
-let draggedPiece = document.querySelector([data-index='${draggedIndex}']`);
-
-let targetPiece = document.querySelector([data-index='${targetIndex}']`);
+            let draggedPiece = document.querySelector(`[data-index='${draggedIndex}']`);
+            let targetPiece = document.querySelector(`[data-index='${targetIndex}']`);
             
-[draggedPiece.dataset.index, targetPiece.dataset.index] = [targetIndex, draggedIndex];
+            [draggedPiece.dataset.index, targetPiece.dataset.index] = [targetIndex, draggedIndex];
             [draggedPiece.style.backgroundPosition, targetPiece.style.backgroundPosition] = [targetPiece.style.backgroundPosition, draggedPiece.style.backgroundPosition];
             
-checkPuzzle();
+            checkPuzzle();
         }
-function checkPuzzle() {
+        
+        function checkPuzzle() {
             let correct = true;
             document.querySelectorAll(".puzzle-piece").forEach((piece, index) => {
                 if (piece.dataset.index != index) correct = false;
             });
             if (correct) envelope.style.display = "block";
         }
+        
         createPuzzle();
     </script>
 </body>
