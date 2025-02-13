@@ -49,11 +49,11 @@
     </style>
 </head>
 <body>
-    <h1>Complete the Puzzle to Unlock Your Invitation</h1>
+    <h1>Complete the Puzzle</h1>
     <div id="puzzle-container"></div>
     
 <div id="envelope">
-        <p>Are you willing to spend this night of chaos with me?</p>
+        <p>will you spend the night of chaos with me?</p>
         <button class="button" onclick="alert('Hooraayy ure my sigma partner at prom! 🥳🥳🥳')">Yes</button>
         <button class="button" onclick="alert('Ipasa mo to sa bente katao kung hindj magiging hatdog ka')">No</button>
     </div>
