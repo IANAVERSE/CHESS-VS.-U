@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prom Invitation Puzzle</title>
-    <style>
-        body {
+<title>Prom Invitation Puzzle</title>
+  <style>
+      body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #1a1a2e;
+            background-color:#1a1a2e;
             color: white;
         }
         #puzzle-container {
@@ -46,8 +46,9 @@
         .button:hover {
             background: #ff6b6b;
         }
-    </style>
-</head>
+  
+  </style>
+  </head>
 <body>
     <h1>Complete the Puzzle</h1>
     <div id="puzzle-container"></div>
