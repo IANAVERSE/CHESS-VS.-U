@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,12 +45,13 @@
         }
         .button:hover {
             background: #ff6b6b;
-        }
+  }
 
   </style>
   </head>
 <body>
-<h1>Complete the Puzzle</h1>
+    <h1>Complete the Puzzle</h1>
+         
 <div id="puzzle-container"></div>
     
 <div id="envelope">
