@@ -52,13 +52,14 @@
     <h1>Complete the Puzzle to Unlock Your Invitation</h1>
     <div id="puzzle-container"></div>
     
-    <div id="envelope">
+    
+<div id="envelope">
         <p>Are you willing to spend this night of chaos with me?</p>
         <button class="button" onclick="alert('hooraaaaaayyy!!')">Yes</button>
         <button class="button" onclick="alert('ipasa mo 'to sa bente katao para di ka maging hotdog')">No</button>
     </div>
     
-    <script>
+<script>
         const puzzleContainer = document.getElementById("puzzle-container");
         const envelope = document.getElementById("envelope");
         const imageURL = "https://via.placeholder.com/300"; 
