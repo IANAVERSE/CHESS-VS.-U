@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -76,7 +75,7 @@
                 piece.setAttribute("data-index", positions[i]);
                 piece.addEventListener("dragstart", dragStart);
                 piece.addEventListener("dragover", dragOver);
-                piece.addEventListener("drop", drop);
+                piece.addEventListener("drop",.drop);
                 puzzleContainer.appendChild(piece);
             }
         }
