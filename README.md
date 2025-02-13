@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -68,7 +69,7 @@
             for (let i = 0; i < 9; i++) {
                 let piece = document.createElement("div");
                 piece.classList.add("puzzle-piece");
-                piece.style.backgroundImage = `url('${imageURL}')`;
+                piece.style.backgroundImage = `url(' {https://www.google.com/search?client=ms-android-realme-terr1-rso2&sca_esv=d1274fad44c47b5c&q=heart+svt+valentine+meme&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RReX7QGzwqho4yuBcgTuZUp_yLz8rf_RWqMX90OzQIvvFWbjdAG_AYmK6suwKEGQivPQdrti6dimpbzUTe16pRtKd7YySKkYVdCwk1K7gvcgVbM2z91IqPbAcd0RR_7DTfAzBQkA&udm=2&sa=X&ved=2ahUKEwixuLXynMGLAxX8rlYBHYe2AsUQxKsJegQIDhAB&ictx=0&biw=424&bih=800&dpr=1.7#vhid=23JI08h4GdVDDM&vssid=mosaic}');
                 piece.style.backgroundPosition = `${-100 * (positions[i] % 3)}px ${-100 * Math.floor(positions[i] / 3)}px`;
                 piece.draggable = true;
                 piece.setAttribute("data-index", positions[i]);
@@ -91,7 +92,7 @@
             let draggedPiece = document.querySelector(`[data-index='${draggedIndex}']`);
             let targetPiece = document.querySelector(`[data-index='${targetIndex}']`);
              [draggedPiece.dataset.index, targetPiece.dataset.index] = [targetIndex, draggedIndex];
-            [draggedPiece.style.backgroundPosition, targetPiece.style.backgroundPosition] = [targetPiece.style.backgroundPosition, draggedPiece.style.backgroundPosition];
+[draggedPiece.style.backgroundPosition, targetPiece.style.backgroundPosition] = [targetPiece.style.backgroundPosition, draggedPiece.style.backgroundPosition];
              checkPuzzle();
         }
         function checkPuzzle() {
